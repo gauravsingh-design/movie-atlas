@@ -23,10 +23,12 @@
     <a href="index.html" class="language active">English</a>
     <a href="hindi.html" class="language">हिंदी</a>
     <a href="mix.html" class="language">Mix</a>
+    <p style="color:#fff">Counter : <span id="counter_number"></span></p>
     </div>
     
     <div class="overlay"></div>
 <button class="generate number">+</button>
+
 
   <script>
 var generator = {
@@ -37,11 +39,18 @@ var generator = {
 
       
 var letterx = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
-
+var counter = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 var number = document.querySelector('.number');
 
 document.querySelector('.overlay').onclick = function () {
 number.textContent = letterx[generator.getRandom()];
+console.log(number.textContent);
+console.log(letterx.indexOf(number.textContent));
+var position=letterx.indexOf(number.textContent)
+counter[position]= counter[position] + 1;
+console.log(counter);
+var span = document.getElementById("counter_number"); 
+span.textContent = counter[position]; 
 };
 
 
