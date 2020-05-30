@@ -1,0 +1,50 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+    <meta charset="TDF-8">
+  <title>Alphabet Hindi</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="main.css">
+
+  <meta name="theme-color" content="#fafafa">
+    <style></style>
+</head>
+
+<body>    
+    <div class="languages">
+    <a href="index.html" class="language">English</a>
+    <a href="hindi.html" class="language active">हिंदी</a>
+    <a href="mix.html" class="language">Mix</a>
+    </div>
+    
+    <div class="overlay"></div>
+<button class="generate number">+</button>
+
+  <script>
+var generator = {
+  getRandom: function () {
+    return Math.floor(Math.random() * 30);
+  },
+};
+
+var letterx = ['क','ख','ग','घ','ह','च','छ','ज','झ','य','श','ट','ठ','ड','झ','ढ','र','त','थ','द','ध','न','ल','स','प','फ','ब','भ','म','व'];
+
+var number = document.querySelector('.number');
+
+document.querySelector('.overlay').onclick = function () {
+number.textContent = letterx[generator.getRandom()];
+};
+
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>

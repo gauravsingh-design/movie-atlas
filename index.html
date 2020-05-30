@@ -1,0 +1,52 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+    <meta charset="TDF-8">
+  <title>Alphabet English</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="main.css">
+
+  <meta name="theme-color" content="#fafafa">
+    <style></style>
+</head>
+
+<body>    
+    <div class="languages">
+    <a href="index.html" class="language active">English</a>
+    <a href="hindi.html" class="language">हिंदी</a>
+    <a href="mix.html" class="language">Mix</a>
+    </div>
+    
+    <div class="overlay"></div>
+<button class="generate number">+</button>
+
+  <script>
+var generator = {
+  getRandom: function () {
+    return Math.floor(Math.random() * 26);
+  },
+};
+
+      
+var letterx = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+
+var number = document.querySelector('.number');
+
+document.querySelector('.overlay').onclick = function () {
+number.textContent = letterx[generator.getRandom()];
+};
+
+
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
